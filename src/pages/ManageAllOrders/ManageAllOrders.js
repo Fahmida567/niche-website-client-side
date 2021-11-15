@@ -13,14 +13,14 @@ const ManageAllOrders = () => {
     const { user } = useAuth();
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        const url = `https://hidden-bayou-70618.herokuapp.com/manageAllOrders`
+        const url = `https://aqueous-sierra-82947.herokuapp.com/manageAllOrders`
         fetch(url)
             .then(res => res.json())
             .then(data => setOrders(data));
     }, [])
 
     const handleDelete = id => {
-        const url = `https://hidden-bayou-70618.herokuapp.com/manageProducts/${id}`;
+        const url = `https://aqueous-sierra-82947.herokuapp.com/manageProducts/${id}`;
         fetch(url, {
             method: 'DELETE'
         })

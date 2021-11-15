@@ -13,7 +13,7 @@ const MyOrders = () => {
     const { user } = useAuth();
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        const url = `http://localhost:5000/myOrders?email=${user.email}`
+        const url = `https://aqueous-sierra-82947.herokuapp.com/myOrders?email=${user.email}`
         fetch(url)
             .then(res => res.json())
             .then(data => setOrders(data));
@@ -21,7 +21,7 @@ const MyOrders = () => {
 
 
     const handleDelete = id => {
-        const url = `http://localhost:5000/purchase/${id}`;
+        const url = `https://aqueous-sierra-82947.herokuapp.com/purchase/${id}`;
         fetch(url, {
             method: 'DELETE'
         })

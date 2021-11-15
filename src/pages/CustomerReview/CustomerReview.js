@@ -21,7 +21,7 @@ const CustomerReview = () => {
             ...review
         }
 
-        fetch('http://localhost:5000/customerReview', {
+        fetch('https://aqueous-sierra-82947.herokuapp.com/customerReview', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

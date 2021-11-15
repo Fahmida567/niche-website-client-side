@@ -14,13 +14,13 @@ import { Button } from '@mui/material';
 const ManageProducts = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/allProducts')
+        fetch('https://aqueous-sierra-82947.herokuapp.com/allProducts')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
 
     const handleDelete = id => {
-        const url = `http://localhost:5000/manageProducts/${id}`;
+        const url = `https://aqueous-sierra-82947.herokuapp.com/manageProducts/${id}`;
         fetch(url, {
             method: 'DELETE'
         })

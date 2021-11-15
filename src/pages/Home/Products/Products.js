@@ -8,7 +8,7 @@ import Product from "../Product/Product";
 const Products = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://aqueous-sierra-82947.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
@@ -21,7 +21,7 @@ const Products = () => {
 
 
         <Box sx={{ flexGrow: 1, my: 10 }}>
-            <Typography variant="h4" sx={{ fontWeight: "medium", m: 10, textAlign: 'center' }}>Best Selling  Products</Typography>
+            <Typography variant="h4" sx={{ fontWeight: "medium", m: 10, textAlign: 'center' }}>Top Products</Typography>
             <Container>
                 <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     {
